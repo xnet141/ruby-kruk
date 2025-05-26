@@ -1,0 +1,20 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bigdecimal (3.1.9)
+    json (2.12.2)
+    oj (3.16.10)
+      bigdecimal (>= 3.0)
+      ostruct (>= 0.2)
+    ostruct (0.6.1)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  json
+  oj
+
+BUNDLED WITH
+   2.6.5

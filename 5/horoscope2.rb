@@ -26,8 +26,9 @@ zodiac = gets.strip.downcase
 
 found = tweets.select do |tweet| # => выдаем элемент, который удовлетворяет условию
   # само условие пишем внутри этого блока do-end
-  puts tweet[0..12]
-  tweet.downcase.include? zodiac
+  puts tweet[0..20]
+  puts "-------------------------------"
+  tweet[0..20].downcase.include? zodiac
 end
 
 puts found[0].class  # или found.first
