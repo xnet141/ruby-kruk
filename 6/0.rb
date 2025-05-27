@@ -4,6 +4,8 @@ puts count_words
 
 words.each do |word|
   count_words[word] += 1
+  @test_count = word
 end
 
+puts @test_count
 puts count_words
