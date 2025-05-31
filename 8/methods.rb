@@ -29,7 +29,7 @@ class Cat
     puts self.inspect
   end
 
-  def sample(age, name, *args)
+  def sample(age, name, *args) # *args массив с любым кол-ом элементов (можно без него)
     #puts args.inspect
     puts age
     puts name
@@ -60,3 +60,5 @@ animal1.sample 10, "My Name"#, 33, 100, :test, [123, 345]
 
 # #Cat.speak
 # animal1 < animal2
+
+animal1.sample 1, 2, 5, 7

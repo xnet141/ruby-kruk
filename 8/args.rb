@@ -13,6 +13,15 @@ class Sample
     puts h1.inspect
     puts h2.inspect
   end
+
+  def sample(age, name, *args) # *args массив с любым кол-ом элементов (можно без него)
+    #puts args.inspect
+    puts age
+    puts name
+    args.each do |a|
+      puts a
+    end
+  end
 end
 
 s = Sample.new
@@ -23,3 +32,5 @@ s.poetry 32, {first_hash: "hello"}, key1: 1, key2: "test", key3: "Hello!" # пе
 # s.my_method(1, "test", 2, "hi")
 # puts "======================"
 # s.new_way(arg2: "hello!", arg1: "hi", arg4: 30)
+
+s.sample 'qwer', 11, 42, 'test'
