@@ -8,20 +8,6 @@ class Question
     @answers = populate_answers_from raw_answers
   end
 
-  def find_answer_by(char)
-    @answers[char]
-  end
-
-  def to_s
-    "\n\n === #{@body} ===\n\n"
-  end
-
-  def display_answers
-    @answers.each do |char, text|
-      puts "#{char}. #{text}"
-    end
-  end
-
   private
 
   def populate_answers_from(raw_answers)
