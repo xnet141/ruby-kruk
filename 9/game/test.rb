@@ -11,6 +11,10 @@ end
 
 class Exp < Test
   CONST_EXP = 20
+  def test
+    super
+    puts "====="
+  end
 end
 
 Test.new.test

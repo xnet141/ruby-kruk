@@ -39,7 +39,7 @@ class GameEngine
     if hero_turn
       puts "\nХодит герой!"
       puts "Что делаем? Введите 3 для зелья (#{@hero.health_potions}) или А для атаки:"
-      action = ""
+      action = nil
       loop do
         action = gets.strip[0].capitalize
         if action == "А" || action == "З"
