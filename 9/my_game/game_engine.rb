@@ -48,9 +48,13 @@ class GameEngine
   private
 
   def difficulty_level
-    level_hash = {1 => :easy, 2 => :normal, 3 => :hard}
     puts "выберите уровень сложности (1, 2, 3)"
-    level_input= gets.strip.to_i
-    level = level_hash[level_input]
+    loop do
+      level_hash = {1 => :easy, 2 => :normal, 3 => :hard}
+      level_input= gets.strip.to_i
+      level = level_hash[level_input]
+      return level if level_input.class == Integer && level_input.between?(1,3)
+      puts "неправильный ввод, введите число от 1 до 3"
+    end
   end
 end
