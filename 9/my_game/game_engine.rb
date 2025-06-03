@@ -14,22 +14,9 @@ class GameEngine
       puts "Здоровья героя #{@hero.hit_points}, кол-во восстановлений #{@hero.health_potions}"
       puts "Здоровья дракона #{@dragon.hit_points}"
 
-      if @hero_turn
-        puts "\nХодит герой!"
-        puts "Что делаем? Введите 3 для зелья (#{@hero.health_potions}) или А для атаки:"
-        action = gets.strip[0]
+      do_hero_turn @hero_turn
 
-        if action == 'З'
-          @hero.drink_potion
-        else
-          dmg = @hero.attack @dragon
-          puts "Герой ударил на #{dmg}"
-        end
-      else
-        puts "\nХодит дракон!"
-        dmg = @dragon.attack @hero
-        puts "Дракон ударил на #{dmg}"
-      end
+      do_dragon_turn @hero_turn
 
       if @hero.hit_points <= 0
         puts "Дракон победил"
@@ -55,6 +42,29 @@ class GameEngine
       level = level_hash[level_input]
       return level if level_input.class == Integer && level_input.between?(1,3)
       puts "неправильный ввод, введите число от 1 до 3"
+    end
+  end
+
+  def do_hero_turn hero_turn
+    if hero_turn
+        puts "\nХодит герой!"
+        puts "Что делаем? Введите 3 для зелья (#{@hero.health_potions}) или А для атаки:"
+        action = gets.strip[0]
+
+        if action == 'З'
+          @hero.drink_potion
+        else
+          dmg = @hero.attack @dragon
+          puts "Герой ударил на #{dmg}"
+        end
+    end
+  end
+
+  def do_dragon_turn hero_turn
+    if !hero_turn
+        puts "\nХодит дракон!"
+        dmg = @dragon.attack @hero
+        puts "Дракон ударил на #{dmg}"
     end
   end
 end
