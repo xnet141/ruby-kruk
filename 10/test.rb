@@ -3,3 +3,5 @@ def foo test
 end
 
 foo :super
+
+# test test
