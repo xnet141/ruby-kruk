@@ -15,7 +15,20 @@ end
 
 p = proc do
   puts "I'm inside proc!"
-  return 42
+  # return # процедура полностью выходит из программы
 end
 
+l = lambda do
+  puts "I'm inside proc!"
+  return 42 # лямбду выходит из себя - программа продолжает работу
+end
+
+puts l.inspect
+puts p.inspect
+
+
 demo(p)
+
+puts "==============="
+
+demo(l)
