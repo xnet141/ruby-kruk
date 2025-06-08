@@ -1,8 +1,25 @@
-require_relative 'printer'
-require_relative 'importer'
+# require_relative 'printer/engine'
+# require_relative 'importer/engine'
 
-printer = Importer::Engine.new
-importer = Printer::Engine.new
+# printer = Importer::Engine.new
+# importer = Printer::Engine.new
 
-importer.start
-printer.start
+# importer.start
+# printer.start
+
+require_relative 'my_lib'
+
+class MyParent
+end
+
+class MyClass < MyParent
+  include MyLib
+
+  def my_instance_method
+    puts "Hi from MyClass!"
+    helper1
+  end
+end
+
+obj = MyClass.new
+obj.my_instance_method
