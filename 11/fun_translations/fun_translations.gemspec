@@ -1,8 +1,6 @@
-require File.expand_path('lib/fun_translations/version', __dir__)
-
 Gem::Specification.new do |spec|
   spec.name                  = 'fun_translations'
-  spec.version               = FunTranslations::VERSION
+  spec.version               = '0.0.1'
   spec.authors               = ['Ilya Krukowski']
   spec.email                 = ['golosizpru@gmail.com']
   spec.summary               = ''
@@ -26,4 +24,3 @@ Gem::Specification.new do |spec|
     'rubygems_mfa_required' => 'true'
   }
 end
-
