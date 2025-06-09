@@ -1,6 +1,8 @@
+require File.expand_path('lib/fun_translations/version', __dir__) # путь относительно корня проекта - берем из файла version константу с версией проекта
+
 Gem::Specification.new do |spec|
   spec.name                  = 'fun_translations'
-  spec.version               = '0.0.1'
+  spec.version               = FunTranslations::VERSION
   spec.authors               = ['Ilya Krukowski']
   spec.email                 = ['golosizpru@gmail.com']
   spec.summary               = ''
