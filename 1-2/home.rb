@@ -13,3 +13,4 @@ if ( age >= 21 ) || ( user_input != 1 && age >= 18 )
 else
   puts "доступ закрыт"
 end
+
