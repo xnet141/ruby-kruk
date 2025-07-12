@@ -2,7 +2,12 @@ random_number = (rand * 2).to_i #(rand 0..2)
 puts random_number
 
 n = 1
-while n <= 10 do
+loop do
+  if n > 10
+    puts "Аварийный выход"
+    break
+  end
+
   print "Угадай число: "
   user_number = gets.to_i
 
