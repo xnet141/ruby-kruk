@@ -1,7 +1,8 @@
 random_number = (rand * 2).to_i #(rand 0..2)
 puts random_number
 
-loop do
+n = 1
+while n <= 10 do
   print "Угадай число: "
   user_number = gets.to_i
 
@@ -13,6 +14,7 @@ loop do
   else
     puts "больше"
   end
+  n = n + 1
 end
 
 
