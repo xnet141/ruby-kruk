@@ -12,32 +12,27 @@ capitals = [
 
 letter = 'A'.ord
 
-rand_cap_i = rand 0..capitals.length - 1
-rand_cap = capitals[rand_cap_i]
-country_cap = countries[rand_cap_i]
-#countries.shuffle 
+countries.shuffle.each_with_index do |country, i|
+  puts "Какая столица у #{country}"
+  country_index_true = countries.index(country)
+  capital_true = capitals[country_index_true]
 
-countries = countries.shuffle
+  capital_h = {}
+  capitals.each_with_index do |capital, i|
+    capital_h[capital] = (letter + i).chr
+  end
 
-countries.each_with_index do |country, i|
-  puts "Страна #{country}"
-end
+  puts capital_h.inspect
 
-puts "Какая столица у #{country_cap}"
-
-capital_h = {}
-capitals.each_with_index do |capital, i|
-  #puts " #{capital}"
-  capital_h[capital] = (letter + i).chr
-end
-
-puts capital_h.inspect
-
-print "Выберите букву: "
-user_capital = gets.strip.upcase
-
-if capital_h.key(user_capital) == rand_cap
-  puts "верно"
-else
-  puts "НЕ верно"
+  loop do
+    print "Выберите букву: "
+    user_letter = gets.strip.upcase
+    user_capital = capital_h.key(user_letter)
+    if  user_capital == capital_true
+      puts "--Верно--"
+      break
+    else
+      puts "--НЕ верно--"
+    end
+  end
 end
