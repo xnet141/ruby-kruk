@@ -1,10 +1,11 @@
+require_relative 'character.rb'
+
 class Hero
-  attr_writer 
-  
+  STRENGTH = 1..10
+
   def initialize 
     @health = 20
     @poison = 3
-    @strike_srength = rand 1..10
   end
 
   def drink_poison
