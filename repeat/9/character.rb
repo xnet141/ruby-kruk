@@ -5,6 +5,8 @@ class Character
     target.health -= strike
   end
 
+  protected #private????
+
   def strike
     rand self.class::STRENGTH
   end

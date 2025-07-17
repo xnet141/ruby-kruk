@@ -6,8 +6,7 @@ class Dragon < Character
 
   def initialize
     @health = 20
-    @poison = 3
   end
 end
 
-puts Dragon.new.strike
+#puts Dragon.new.strike

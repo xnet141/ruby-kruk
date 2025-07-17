@@ -6,10 +6,11 @@ class Hero < Character
 
   def initialize
     @health = 20
-    @poison = 3
+    @poison = 2
   end
 
   def drink_poison
-
+    @health += 5
+    @poison -+ 1
   end
 end
