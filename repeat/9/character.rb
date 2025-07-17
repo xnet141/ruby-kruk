@@ -1,11 +1,11 @@
 class Character
-  
-  
-  def attack
 
+
+  def attack target
+    target.health -= strike
   end
 
-  def strike 
+  def strike
     rand self.class::STRENGTH
-  end 
+  end
 end
