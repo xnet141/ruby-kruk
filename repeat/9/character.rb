@@ -1,5 +1,5 @@
 class Character
-
+  attr_accessor :health
 
   def attack target
     target.health -= strike

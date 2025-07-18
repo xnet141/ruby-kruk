@@ -1,7 +1,7 @@
-require_relative 'character.rb'
+require_relative 'character'
 
 class Hero < Character
-  attr_accessor :health
+  attr_reader :poison
   STRENGTH = 1..10
 
   def initialize
@@ -10,7 +10,8 @@ class Hero < Character
   end
 
   def drink_poison
-    @health += 5
-    @poison -+ 1
+    return if @poison <= 0
+    @health += 5 
+    @poison -= 1 
   end
 end
