@@ -5,9 +5,9 @@ class Hero < Character
   STRENGTH = 1..8
   POISON_STRENGTH = 10
 
-  def initialize
-    @health = 20
-    @poison = 2
+  def initialize arr
+    @health = arr[0]
+    @poison = arr[1]
   end
 
   def drink_poison

@@ -3,6 +3,7 @@ class Character
 
   def attack target
     target.health -= strike
+    return strike
   end
 
   protected #private????
