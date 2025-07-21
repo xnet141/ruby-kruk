@@ -1,9 +1,13 @@
 def method1(arg1, &block)  #  &(амперсанд значит, что будет передан блок)
-  method2(&block)
-  yield 
-  b = block.call
-  puts block.inspect
-  puts "b = #{b}, #{yield}" # не присвоить блок переменной, для этого есть Proc
+  # method2(&block)
+  y = yield arg1
+  b = block.call arg1
+
+  puts y.class
+  puts b.class
+  puts yield(arg1).class
+  puts block.class
+  puts "b = #{b}, #{y}" 
 end
 
 def method2(&b)
@@ -12,7 +16,8 @@ def method2(&b)
   b.call
 end
 
-method1(100) do
+method1(100) do |var|
   puts "hello from method1 !!"
+  var ** 2
 end
 
