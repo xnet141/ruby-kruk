@@ -1,8 +1,9 @@
-#require File.expand_path('lib/fun_translations/version', __dir__) # путь относительно корня проекта - берем из файла version константу с версией проекта
-
+require File.expand_path('lib/fun_translations/version', __dir__) # (__dir__) путь относительно корня проекта - берем из файла version константу с версией проекта
+# expand_path. Метод класса File в Ruby, который возвращает абсолютный путь файла, переданного в качестве аргумента. Также может принимать относительные пути. 
+# Пример воврата -> "/home/alex/ruby-kruk/repeat/10/test" 
 Gem::Specification.new do |spec|
   spec.name                  = 'fun_translations'
-  spec.version               = '0.0.1'#FunTranslations::VERSION
+  spec.version               = FunTranslations::VERSION
   spec.authors               = ['Ilya Krukowski']
   spec.email                 = ['golosizpru@gmail.com']
   spec.summary               = ''
