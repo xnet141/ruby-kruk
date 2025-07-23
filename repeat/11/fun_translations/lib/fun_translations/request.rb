@@ -12,8 +12,11 @@ module FunTranslations
 
     private
 
-    def respond_with(raw_response)
-      JSON.parse(raw_respose.body) # Faraday вернет на запрос connection.post спец объект, который отвечает на метод body
+    def respond_with(raw_response) # Faraday вернет на запрос connection.post спец объект, который отвечает на метод body
+      body = raw_response.body.empty? ?
+         raw_response.body : JSON.parse(raw_respose.body)
+
+
     end
   end
 end
