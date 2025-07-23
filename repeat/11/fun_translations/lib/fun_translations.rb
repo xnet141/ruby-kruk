@@ -1,4 +1,5 @@
 require 'faraday'
+require 'json'
 require 'zeitwerk' #чтоб загружать всефайлы require_relative
 
 loader = Zeitwerk::Loader.for_gem

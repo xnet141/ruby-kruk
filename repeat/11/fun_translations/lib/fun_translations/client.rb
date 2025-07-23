@@ -7,7 +7,9 @@ module FunTranslations
 
     # endpoint = :yoda, :pirate, :quenya
     def translate(endpoint, text)
-      post "/translate/#{endpoint}.json", { text: text }
+      FunTranslations::Translations.new(
+        post("/translate/#{endpoint}.json", { text: text })
+      )  
     end
   end
 end
