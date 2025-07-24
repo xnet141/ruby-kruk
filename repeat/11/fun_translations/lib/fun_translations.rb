@@ -6,5 +6,7 @@ loader = Zeitwerk::Loader.for_gem
 loader.setup 
 
 module FunTranslations
-
+  def self.client
+    FunTranslations::Client.new
+  end
 end

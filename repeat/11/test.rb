@@ -12,4 +12,6 @@ require 'json'
 # puts f.foo2
 # puts ff
 
-puts JSON.parse('{"test": "dsada", "test2": "frfr"}')
+var = JSON.parse('{"\test": "dsada", "test2": "frfr"}')
+
+puts var
