@@ -6,7 +6,7 @@ loader = Zeitwerk::Loader.for_gem
 loader.setup 
 
 module FunTranslations
-  def self.client
-    FunTranslations::Client.new
+  def self.client(token = nil) # self обязательно для вызова напрямую из модуля
+    FunTranslations::Client.new token
   end
 end
