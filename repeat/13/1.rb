@@ -1,4 +1,7 @@
-def div(a, b) 
+def div(a, b)
+  retries = 1
+  max_retries = 3
+  
   begin
     # result = a / b 
     #1 / 0 # => exception
@@ -11,6 +14,12 @@ def div(a, b)
     # 0
   rescue => e
     puts "Произошда ошибка класса #{e.class.name}:\n#{e.message}"
+    if retries < max_retries
+      retries += 1
+      sleep 2**retries
+      retry # выполнить блок begin еще раз
+    end
+    
     # puts "unknown exception"
     # 888
   else # сюда мы заходим после выполнения блока begin, если там не было ошибок
@@ -26,4 +35,4 @@ end
 puts '=====trying to divide by zero:'
 puts div(10, 0).inspect
 
-puts 'hi!'
+puts 'Hi!!!!'
