@@ -3,7 +3,7 @@ def div(a, b)
   max_retries = 3
   
   begin
-    # result = a / b 
+     result = a / b 
     #1 / 0 # => exception
     # ...
     # ...
