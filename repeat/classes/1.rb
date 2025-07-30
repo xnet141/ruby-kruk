@@ -2,8 +2,12 @@
 
 TEST = "main namespace"
 
+class Test
+
+end
+
 module MySuperLib
-  class Animal
+  class Animal < Test
     TEST = "my constant"
     attr_accessor :name
 
