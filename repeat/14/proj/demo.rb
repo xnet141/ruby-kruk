@@ -1,9 +1,9 @@
 class Demo
-  # attr_accessor :val
+  attr_accessor :val
   
-  # def initialize(val)
-  #   @val = 42
-  # end
+  def initialize(val)
+    @val = 42
+  end
 
   def self.run
     42

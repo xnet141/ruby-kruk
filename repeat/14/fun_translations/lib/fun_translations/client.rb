@@ -4,7 +4,7 @@ module FunTranslations
 
     attr_accessor :token
 
-    def initialize
+    def initialize(token = nil) # token = nil, если нет токена
       @token = token
     end
 

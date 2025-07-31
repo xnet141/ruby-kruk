@@ -4,15 +4,18 @@ require_relative '../demo'
 
 # describe - содержит в себе набор тестов (в блоках it, specify)
 RSpec.describe Demo do # в блок describe передана ссылка на класс demo.
+  let(:obj) { puts 'obj created!' ; described_class.new(100) } # создает объект obj в тех тестах, где мы с ним работаем
+
   specify '#my_arr' do
-    # puts obj.val
-    obj = described_class.new
+    puts obj.val
+    # obj = described_class.new
     expect(obj.my_arr).to include(2)
-    # obj.val = 1
+    obj.val = 1
   end
 
   specify '#calc' do
-    obj = described_class.new
+    puts obj.val
+    # obj = described_class.new
     expect(obj.calc(2, 3)).to eq(6)
     expect(obj).to be_an_instance_of(described_class) # be_an_instance_of проверяет является ли obj образцом класса
   end
