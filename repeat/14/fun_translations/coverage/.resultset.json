@@ -1,6 +1,21 @@
 {
   "RSpec": {
     "coverage": {
+      "/home/alex/ruby-kruk/repeat/14/fun_translations/lib/fun_translations.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          4,
+          null
+        ]
+      },
       "/home/alex/ruby-kruk/repeat/14/fun_translations/lib/fun_translations/client.rb": {
         "lines": [
           1,
@@ -10,12 +25,12 @@
           1,
           null,
           1,
-          1,
+          4,
           null,
           null,
           null,
           1,
-          0,
+          3,
           null,
           null,
           null,
@@ -36,7 +51,7 @@
           null,
           null,
           null,
-          0,
+          3,
           null,
           null,
           null,
@@ -50,12 +65,12 @@
           null,
           null,
           null,
+          3,
           0,
-          0,
-          0,
+          3,
           null,
-          0,
-          0,
+          3,
+          3,
           null,
           null,
           null,
@@ -73,9 +88,9 @@
           1,
           null,
           1,
-          0,
-          0,
-          0,
+          3,
+          3,
+          3,
           null,
           null,
           null,
@@ -83,22 +98,42 @@
           null,
           1,
           null,
-          0,
+          3,
           null,
           null,
           null,
           null,
-          0,
+          3,
           null,
           null,
-          0,
+          3,
           null,
           null,
           null,
           null
         ]
+      },
+      "/home/alex/ruby-kruk/repeat/14/fun_translations/lib/fun_translations/translation.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          3,
+          1,
+          null,
+          2,
+          null,
+          3,
+          3,
+          3,
+          3,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1754079954
+    "timestamp": 1754227768
   }
 }
