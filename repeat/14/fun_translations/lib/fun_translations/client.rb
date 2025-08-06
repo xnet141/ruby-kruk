@@ -13,10 +13,10 @@ module FunTranslations
       FunTranslations::Translation.new(
         post(
           "/translate/#{endpoint}.json",
-          self,  # передаем текущий объект, self это ссылка на текущий объект (образец класса Client)
-          { text: text }.merge(params)
+          self, # передаем текущий объект, self это ссылка на текущий объект (образец класса Client)
+          {text: text}.merge(params)
         )
-      )  
+      )
     end
   end
 end

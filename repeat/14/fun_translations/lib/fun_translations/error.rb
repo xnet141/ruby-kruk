@@ -25,7 +25,6 @@ module FunTranslations
     ServiceUnavailable = Class.new(ServerError)
     GatewayTimeout = Class.new(ServerError)
 
-
     ERRORS = {
       400 => FunTranslations::Error::BadRequest,
       401 => FunTranslations::Error::Unauthorized,
@@ -40,7 +39,7 @@ module FunTranslations
       502 => FunTranslations::Error::BadGateway,
       503 => FunTranslations::Error::ServiceUnavailable,
       504 => FunTranslations::Error::GatewayTimeout
-    }.freeze #.freeze в Ruby используется для замораживания объекта, то есть придания ему свойства неизменяемости. 
+    }.freeze # .freeze в Ruby используется для замораживания объекта, то есть придания ему свойства неизменяемости.
 
     def self.from_response(body)
       msg = body['detail'] || body['message']

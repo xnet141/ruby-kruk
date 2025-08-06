@@ -28,7 +28,7 @@ RSpec.describe FunTranslations::Client do
           status: 200,
           body: JSON.dump(data)
         )
-      
+
       translation = test_client('my token').translate :yoda, text
 
       expect(translation.translated_text).to eq(translated)
@@ -89,7 +89,7 @@ RSpec.describe FunTranslations::Client do
           status: 200,
           body: JSON.dump(data)
         )
-      
+
       translation = test_client.translate 'morse/audio', text
       expect(translation.audio).to eq(audio)
       expect(translation.original_text).to eq(text)

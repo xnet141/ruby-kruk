@@ -29,7 +29,6 @@ RSpec.describe FunTranslations::Error do
     )
   end
 
-
   it 'handles error 404' do
     data = {
       error: {
@@ -81,5 +80,5 @@ RSpec.describe FunTranslations::Error do
         text: 'text'
       )
     end.to raise_error(described_class, 'Unknown error')
-  end  
+  end
 end
