@@ -1,4 +1,6 @@
-#для подключения файла в irb можно набрать "irb -r ./filename.rb" # запустится консоль с подключенным файлом
+# для подключения файла в irb можно набрать "irb -r ./filename.rb" # запустится консоль с подключенным файлом
+
+# имена классов - это константы
 
 TEST = "main namespace"
 
@@ -21,9 +23,24 @@ module MySuperLib
 
     def hello
       puts ::TEST # :: => двоеточия нужны для обращения к константе вне модуля
+      puts TEST
     end
   end
 end
 
 obj = MySuperLib::Animal.new "test"
 obj.hello
+
+puts "========1"
+
+p MySuperLib::Animal::TEST
+
+puts "=======2"
+
+klass = MySuperLib::Animal
+p klass::TEST
+
+puts "=======3"
+
+klass_new = klass.new "super test"
+klass_new.hello
