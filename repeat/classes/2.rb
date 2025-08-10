@@ -9,7 +9,7 @@ class Animal
   end
 
   def self.find(term = '') # Animal.find
-    driver = Selenium::WebDriver.for :chrome
+    driver = Selenium::WebDriver.for :firefox
     full_term = CGI.escape term + " " + self.name.downcase
     driver.get "https://ddg.gg/?q=#{full_term}"
   end
