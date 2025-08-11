@@ -55,3 +55,49 @@ end
 
 puts '==================='
 
+module Zipper
+  attr_accessor :bad
+
+  def ok
+    puts 'ok!!'
+  end
+
+  class << self
+    attr_accessor :extension
+
+    def config
+      puts 'config!!!!'
+    end
+  end
+
+  def self.pool
+    puts 'pool!!'
+  end
+end
+
+class Mupper
+  extend Zipper
+end
+
+Zipper::extension = 'zippippp'
+puts Zipper::extension
+# Mupper::extension = 'muppppp'
+# puts Mupper::extension
+Mupper.ok
+# Mupper.new.ok
+Mupper.bad = 'very bad'
+puts Mupper.bad
+puts "=============="
+
+class Animal 
+  class << self
+    def age 
+      puts 42
+    end
+  end
+end
+
+class Cat < Animal
+end
+
+Cat.age

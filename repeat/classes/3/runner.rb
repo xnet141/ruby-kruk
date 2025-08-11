@@ -1,4 +1,4 @@
-require_relative 'processor/processor'
+require_relative 'config'
 
 Zipper::Processor.open_and_processor_zip('./arch.zip')
 

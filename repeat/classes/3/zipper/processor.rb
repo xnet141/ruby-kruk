@@ -27,7 +27,7 @@ module Zipper
       private
 
       def proper_ext?(filename)
-        '.txt' == Pathname.new(filename).extname
+        Zipper.extension == Pathname.new(filename).extname
       end
     end
   end
