@@ -1,13 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    bigdecimal (3.1.9)
+    bigdecimal (3.2.2)
     fileutils (1.7.3)
-    json (2.12.2)
-    oj (3.16.10)
+    json (2.13.2)
+    oj (3.16.11)
       bigdecimal (>= 3.0)
       ostruct (>= 0.2)
-    ostruct (0.6.1)
+    ostruct (0.6.3)
 
 PLATFORMS
   ruby
@@ -19,4 +19,4 @@ DEPENDENCIES
   oj
 
 BUNDLED WITH
-   2.6.5
+   2.7.1
