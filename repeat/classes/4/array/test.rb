@@ -33,3 +33,25 @@ end
 fast
 avg
 slow
+
+ROLES = %i[superadmin admin]
+USERS = [
+  {
+    name: "John",
+    role: :admin
+  },
+  {
+    name: "Cathie",
+    role: "user"
+  }
+]
+
+def fast
+  USERS.select do |user|
+    puts ROLES.include?(user[:role])
+  end
+  puts 'fast!!!!'
+end
+
+fast
+
