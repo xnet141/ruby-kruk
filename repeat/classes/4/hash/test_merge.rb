@@ -8,8 +8,9 @@ def setup_env(key, hash)
   # hash.each do |key, value| 
   #   new_config[key] = value # заново создаем новый хеш, чтоб оригинальный не мутировал
   # end
-  new_config = {}.merge(hash)
-  new_config.fetch(key) { yield(new_config, key) } # merge позволяет избавиться от мутирования оригинального хэша env
+  # new_config = {}.merge(hash) # merge позволяет избавиться от мутирования оригинального хэша env
+  new_config = hash.clone # clone создает копию объекта 
+  new_config.fetch(key) { yield(new_config, key) } 
   puts new_config
   puts new_config.object_id
   new_config
