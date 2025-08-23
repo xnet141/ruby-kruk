@@ -1,0 +1,5 @@
+https://github.com/fastruby/fast-ruby/tree/main/code
+
+https://github.com/DamirSvrtan/fasterer - утита по производительности
+
+https://docs.rubocop.org/rubocop-performance/
