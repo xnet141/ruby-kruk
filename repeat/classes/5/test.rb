@@ -2,6 +2,7 @@ class Roman < Hash
   def test key, value
     self[key] = value
   end
+  
 
   def self
     self
