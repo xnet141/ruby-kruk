@@ -5,8 +5,8 @@ class BaseModel
 
   def initialize(params)
     params.each do |k, v|
-      self.instance_variable_set "@#{k}", v # instance_variable_set - позволяет изменить значение переменной экземпляра (переменной объекта). Имена таких переменных всегда имеют префикс @
-    end
+      self.instance_variable_set "@#{k}", v # instance_variable_set - позволяет установить значение переменной экземпляра (переменной объекта). Имена таких переменных всегда имеют префикс @. Также
+    end                                     # instance_variable_set позволяет принять название переменной в виде "@#{k}", простое присваивание "@#{k}" = v работать не будет
   end
 
   class << self
