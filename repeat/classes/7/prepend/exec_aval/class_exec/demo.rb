@@ -1,12 +1,8 @@
-require 'oj'
-require_relative 'base'
-require_relative 'album'
-require_relative 'group'
+require_relative 'main'
 
 album = Album.new
 group = Group.new
 
 puts album.public_methods false
 puts '=' * 20
-g = group.public_methods false
-puts g.inspect
+puts group.public_methods false

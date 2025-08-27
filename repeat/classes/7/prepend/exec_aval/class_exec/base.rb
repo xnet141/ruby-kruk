@@ -2,10 +2,8 @@ class Base
   class << self
     def inherited(subclass)
       attrs = attributes_for subclass
-      puts attrs.inspect
       subclass.class_exec do
-        puts attrs.inspect
-        attr_reader(*attrs)
+        attr_reader(*attrs) # Оператор звёздочка (*) в контексте attr_reader используется для распаковки массива аргументов и позволяет передать несколько переменных одновременно
       end
       super
     end
