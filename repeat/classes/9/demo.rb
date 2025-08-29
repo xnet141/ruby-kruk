@@ -1,5 +1,6 @@
 require 'active_support/inflector/transliterate'
 require 'cgi'
+require 'digest'
 
 class Animal
   include ActiveSupport::Inflector
@@ -11,15 +12,13 @@ class Animal
   def initialize(name, age)
     @name = name
     @age = age
+    @secret = Digest::MD5.hexdigest name + " " + age.to_s
   end
 
   def name
     @name
   end
 
-  private def maximum_foody
-    self.age > 2 ? 350 : 250
-  end
 
   def to_h
     {
@@ -34,6 +33,15 @@ class Animal
   def to_param
     parameterize name
   end
+
+  
+  private 
+  
+  def maximum_foody
+    self.age > 2 ? 350 : 250
+  end
+
+  attr_reader :secret
 end
 
 class Cat < Animal
@@ -57,6 +65,10 @@ class Cat < Animal
     params = CGI.escape "#{self.to_param},#{other_cat.to_param}"
     "http://example.com/cats?q=#{params}"
   end
+
+  def reveal_secret
+    secret
+  end
 end
 
 cat = Cat.new 'Spot', 1
@@ -79,5 +91,13 @@ other_cat = Cat.new 'Mr. Buttons', 5
 
 # puts cat.can_eat_more?(other_cat)
 
-puts cat.url_for
-puts cat.search_url_for(other_cat)
+# puts cat.url_for
+# puts cat.search_url_for(other_cat)
+puts cat.reveal_secret
+
+
+puts cat.protected_methods
+puts cat.methods # protecred, public
+puts cat.methods.grep /maximum/ 
+
+puts cat.send(:secret) # для вызова private метода можно использовать send, но лучше так не делать!!
