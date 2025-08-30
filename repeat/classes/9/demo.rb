@@ -95,7 +95,6 @@ other_cat = Cat.new 'Mr. Buttons', 5
 # puts cat.search_url_for(other_cat)
 puts cat.reveal_secret
 
-
 puts cat.protected_methods
 puts cat.methods # protecred, public
 puts cat.methods.grep /maximum/ 
