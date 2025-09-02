@@ -1,4 +1,17 @@
-puts (1..1000).map {|i| puts(i) ; i ** 2}.select(&:even?).first(3).inspect
+puts (1..1000).lazy.map {|i| puts(i) ; i ** 2}.
+  select(&:even?).take(100).select{|i| (i % 3).zero?}.force.inspect
 
-arr = [1, 22, 44]
-puts arr.select(&:even?) # вернет массив четных
+puts "=" * 30
+
+# arr = [*1..100]
+# puts arr.lazy.select(&:even?).first(3) # вернет массив четных
+# # puts arr.inspect
+
+# puts "=" * 30
+
+def calc
+  (1..1000).lazy.map {|i| puts(i) ; i ** 2}.
+  select(&:even?).take(100).eager
+end
+
+puts calc.select {|i| (i % 3).zero?}.inspect
