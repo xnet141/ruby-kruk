@@ -31,3 +31,7 @@ puts "=" * 29
 puts "Install2012.vv@gmail.spb.com" =~ /^[a-z\d\.]+@[a-z\d\.]+/i # - i - игнор case
 
 # . - точка это спецсимвол, её экранируют \.
+
+puts "morrrrr" =~ /mo./
+puts "morrrrr" =~ /mo.$/ # nil, так как после любого символа (.) идет $, то есть конец линии
+puts "mor" =~ /mo.$/ 
