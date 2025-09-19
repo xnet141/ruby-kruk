@@ -8,7 +8,7 @@ data = {
 }
 
 case data 
-in {name: sherlock_name, extra: {age: sherlock_age}}
+in name: sherlock_name, extra: {age: sherlock_age}
   puts sherlock_name
   puts sherlock_age
 in extra: {university:}

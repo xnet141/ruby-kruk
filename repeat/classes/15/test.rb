@@ -12,11 +12,11 @@ end
 
 # puts hh[:name]
 
-a = [:test, :fest]
+a = [:test, [:fest, :mest]]
 
 case a
-in [:test, :fest]
-  puts "es"
+in [:test, data]
+  puts data
 else
   puts "no match"
 end
