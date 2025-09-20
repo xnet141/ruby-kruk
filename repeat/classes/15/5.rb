@@ -1,3 +1,10 @@
+# ages = [28, 30, 35, 42, 50]
+
+# case ages
+# in [Integer => age1, Integer => age2, *]
+#   puts age1, age2
+# end
+
 users = [:ok,
   [
     {
@@ -19,14 +26,11 @@ users = [:ok,
   ]
 ]
 
-# puts users[1].any? {|user| user in {name: /lock/, extra: {age: "30"}}}
-
-# case users 
-# in :ok, data
-#   puts data
-# in [:error, error]
-#   puts "Error: #{error}"
-# else
-#   puts "Unknown data!"
-# end
-
+case users 
+in :ok, [{extra: {age: sherlock_age}}, *]
+  puts sherlock_age
+in :error, error
+  puts "Error: #{error}"
+else
+  puts "No match"
+end

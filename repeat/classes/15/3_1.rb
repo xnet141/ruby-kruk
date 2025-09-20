@@ -19,14 +19,9 @@ users = [:ok,
   ]
 ]
 
-# puts users[1].any? {|user| user in {name: /lock/, extra: {age: "30"}}}
-
-# case users 
-# in :ok, data
-#   puts data
-# in [:error, error]
-#   puts "Error: #{error}"
-# else
-#   puts "Unknown data!"
-# end
-
+case users
+in [Symbol, Array]
+  puts "correct!"
+else
+  puts "incorrect"
+end

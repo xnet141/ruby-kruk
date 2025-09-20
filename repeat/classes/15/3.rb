@@ -7,10 +7,24 @@ ages = [28, 30, 35, 42, 50]
 #   puts "incorrect"
 # end
 
-case {sherlock: 30, watson: 28, lestrade: 40}
-in {sherlock: test_30, watson:, **} # ** две звезды для хеша, либо можно вообще убрать **, оставить {sherlock: test_30, watson:}
-  puts test_30
-  puts watson
-else
-  puts "incorrect"
+# case {sherlock: 30, watson: 28, lestrade: 40}
+# in {sherlock: test_30, watson:, **} # ** две звезды для хеша, либо можно вообще убрать **, оставить {sherlock: test_30, watson:}
+#   puts test_30
+#   puts watson
+# else
+#   puts "incorrect"
+# end
+
+# case {sherlock: 30, watson: 28, lestrade: 40, hudson: 60}
+# in {sherlock: test_30, watson:, **others} # ** две звезды для хеша, либо можно вообще убрать **, оставить {sherlock: test_30, watson:}
+#   puts test_30
+#   puts watson
+#   puts others
+# else
+#   puts "incorrect"
+# end
+
+case ages
+in [28, *other_ages]
+  puts other_ages
 end
