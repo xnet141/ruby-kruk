@@ -34,3 +34,32 @@
 # in :ok, [*, {name: ^name, extra: {age:}}, *]
 #   puts age
 # end
+
+
+users = {
+  required_name: "John",
+  users: [
+    {
+      name: "Sherlock",
+      surname: "Holmes",
+      extra: {
+        age: "30",
+        hobby: "violin"
+      }
+    },
+    {
+      name: "John",
+      surname: "Watson",
+      extra: {
+        age: "28",
+        hobby: "writting"
+      }
+    }
+  ]
+}
+
+case users
+in required_name:, users: [*, {name: ^required_name, extra: {age:}}, *]
+  puts "#{required_name}: #{age}"  
+end
+
