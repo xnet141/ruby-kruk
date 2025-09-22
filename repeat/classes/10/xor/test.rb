@@ -37,3 +37,5 @@ limit = "billlll"
 p byte_str.dup.fill(byte_str.length...limit.length) {|i| byte_str.rotate(i).first; p i} -> для работы fill очень важен блок
 
 p byte_str.dup.fill(byte_str.length...limit.length)
+
+p "test"
